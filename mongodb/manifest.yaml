@@ -11,13 +11,6 @@ spec:
   - name: mongodb
     imagePullPolicy: Always
     image: sahiya/mongodb:p1
-    resources:
-      requests:
-        cpu: "100m"
-        memory: "128Mi"
-      limits:
-        cpu: "100m"
-        memory: "128Mi"
     ports:
       - containerPort: 27017
 ---
@@ -31,5 +24,5 @@ spec:
     tier: db
   ports:
     - protocol: TCP
-      port: 80
+      port: 27017
       targetPort: 27017

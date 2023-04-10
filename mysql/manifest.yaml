@@ -35,13 +35,6 @@ spec:
         name: mysql-secret
     ports:
       - containerPort: 3306
-    resources:
-      requests:
-        cpu: "100m"
-        memory: "128Mi"
-      limits:
-        cpu: "100m"
-        memory: "128Mi"
 ---
 apiVersion: v1
 kind: Service
@@ -53,7 +46,7 @@ spec:
     tier: db
   ports:
     - protocol: TCP
-      port: 80
+      port: 3306
       targetPort: 3306
 
 
