@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongodb
+  labels:
+    name: mongodb
+    tier: db
+spec:
+  containers:
+  - name: mongodb
+    imagePullPolicy: Always
+    image: sahiya/mongodb:p1
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "128Mi"
+      limits:
+        cpu: "100m"
+        memory: "128Mi"
+    ports:
+      - containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-service
+spec:
+  selector:
+    name: mongodb
+    tier: db
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 27017
