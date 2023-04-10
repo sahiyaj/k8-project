@@ -17,7 +17,7 @@ spec:
   containers:
   - name: catalogue
     imagePullPolicy: Always
-    image: sahiya/catalogue:k8.v1
+    image: sahiya/catalogue:p1
     envFrom:
     - configMapRef:
         name: catalogue-config
