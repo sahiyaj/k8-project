@@ -13,11 +13,11 @@ spec:
     image: sahiya/web:v1
     resources:
       requests:
-        cpu: "128m"
-        memory: "152Mi"
+        cpu: "100m"
+        memory: "128Mi"
       limits:
-        cpu: "128m"
-        memory: "152Mi"
+        cpu: "100m"
+        memory: "128Mi"
     ports:
       - containerPort: 80
 ---
