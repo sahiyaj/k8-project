@@ -28,4 +28,5 @@ spec:
       name: amqp
     - port: 15672
       name: http
-  type: ClusterIP 
+  type: ClusterIP
+---
